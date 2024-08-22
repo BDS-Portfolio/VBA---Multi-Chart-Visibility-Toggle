@@ -1,0 +1,46 @@
+Option Explicit
+
+Sub RevenueShow_Summary()
+    Dim sht As Worksheet
+    Set sht = Worksheets(AppConstants.SUMMARY_SLIDES_SHEET)
+
+    sht.ChartObjects("SummaryCharts_Revenue").Visible = False
+    sht.ChartObjects("SummaryCharts_Profit").Visible = True
+    sht.ChartObjects("SummaryCharts_ExpenseCategories").Visible = False
+    sht.Shapes("SummaryTab_Revenue").Fill.ForeColor.RGB = RGB(229, 25, 55)
+    sht.Shapes("SummaryTab_Profit").Fill.ForeColor.RGB = RGB(224, 224, 224)
+    sht.Shapes("SummaryTab_ExpenseCategories").Fill.ForeColor.RGB = RGB(224, 224, 224)
+    sht.Shapes("SummaryTab_Revenue").TextFrame.Characters.Font.Color = RGB(255, 255, 255)
+    sht.Shapes("SummaryTab_Profit").TextFrame.Characters.Font.Color = RGB(162, 162, 162)
+    sht.Shapes("SummaryTab_ExpenseCategories").TextFrame.Characters.Font.Color = RGB(162, 162, 162)
+End Sub
+
+Sub ProfitShow_Summary()
+    Dim sht As Worksheet
+    Set sht = Worksheets(AppConstants.SUMMARY_SLIDES_SHEET)
+    
+    sht.ChartObjects("SummaryCharts_Revenue").Visible = True
+    sht.ChartObjects("SummaryCharts_Profit").Visible = False
+    sht.ChartObjects("SummaryCharts_ExpenseCategories").Visible = False
+    sht.Shapes("SummaryTab_Revenue").Fill.ForeColor.RGB = RGB(224, 224, 224)
+    sht.Shapes("SummaryTab_Profit").Fill.ForeColor.RGB = RGB(229, 25, 55)
+    sht.Shapes("SummaryTab_ExpenseCategories").Fill.ForeColor.RGB = RGB(224, 224, 224)
+    sht.Shapes("SummaryTab_Revenue").TextFrame.Characters.Font.Color = RGB(162, 162, 162)
+    sht.Shapes("SummaryTab_Profit").TextFrame.Characters.Font.Color = RGB(255, 255, 255)
+    sht.Shapes("SummaryTab_ExpenseCategories").TextFrame.Characters.Font.Color = RGB(162, 162, 162)
+End Sub
+
+Sub ExpenseCategoriesShow_Summary()
+    Dim sht As Worksheet
+    Set sht = Worksheets(AppConstants.SUMMARY_SLIDES_SHEET)
+    
+    sht.ChartObjects("SummaryCharts_Revenue").Visible = False
+    sht.ChartObjects("SummaryCharts_Profit").Visible = False
+    sht.ChartObjects("SummaryCharts_ExpenseCategories").Visible = True
+    sht.Shapes("SummaryTab_Revenue").Fill.ForeColor.RGB = RGB(224, 224, 224)
+    sht.Shapes("SummaryTab_Profit").Fill.ForeColor.RGB = RGB(224, 224, 224)
+    sht.Shapes("SummaryTab_ExpenseCategories").Fill.ForeColor.RGB = RGB(229, 25, 55)
+    sht.Shapes("SummaryTab_Revenue").TextFrame.Characters.Font.Color = RGB(162, 162, 162)
+    sht.Shapes("SummaryTab_Profit").TextFrame.Characters.Font.Color = RGB(162, 162, 162)
+    sht.Shapes("SummaryTab_ExpenseCategorie").TextFrame.Characters.Font.Color = RGB(255, 255, 255)
+End Sub
